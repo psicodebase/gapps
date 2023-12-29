@@ -82,6 +82,26 @@ jobs:
                     "value": "${{ secrets.REGISTRY_PASSWORD }}",
                     "slotSetting": false
                 },
+                 {
+                    "name": "POSTGRES_USER",
+                    "value": "${{ secrets.POSTGRES_USER }}",
+                    "slotSetting": false
+                },
+                 {
+                    "name": "POSTGRES_HOST",
+                    "value": "${{ secrets.POSTGRES_HOST }}",
+                    "slotSetting": false
+                },
+                 {
+                    "name": "POSTGRES_PASSWORD",
+                    "value": "${{ secrets.POSTGRES_PASSWORD }}",
+                    "slotSetting": false
+                },
+                 {
+                    "name": "POSTGRES_DB",
+                    "value": "${{ secrets.POSTGRES_DB }}",
+                    "slotSetting": false
+                },
                 {
                   "name": "KC_PROXY",
                   "value": "edge",
