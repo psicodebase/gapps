@@ -12,7 +12,7 @@ services:
       - "5000:5000"
     restart: unless-stopped
     environment:
-      - SQLALCHEMY_DATABASE_URI=postgresql://${POSTGRES_USER:-db1}:${POSTGRES_PASSWORD:-db1}@${POSTGRES_HOST:-postgres}/${POSTGRES_DB:-db1}
+      - SQLALCHEMY_DATABASE_URI=postgresql://${POSTGRES_USER:-db1}:${POSTGRES_PASSWORD:-db1}@${POSTGRES_HOST:-postgres}/${POSTGRES_DB:-db1}?sslmode=require
       - DEFAULT_EMAIL=${DEFAULT_EMAIL:-admin@example.com}
       - DEFAULT_PASSWORD=${DEFAULT_PASSWORD:-admin}
       - RESET_DB=${RESET_DB:-no}
