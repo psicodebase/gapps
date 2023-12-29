@@ -36,7 +36,7 @@ services:
     #  - "5000:5000"
     restart: unless-stopped
     environment:
-      - SQLALCHEMY_DATABASE_URI=postgresql://${POSTGRES_USER:-db1}:${POSTGRES_PASSWORD:-db1}@${POSTGRES_HOST:-postgres}/${POSTGRES_DB:-db1}
+      - SQLALCHEMY_DATABASE_URI=postgresql://${POSTGRES_USER:-db1}:${POSTGRES_PASSWORD:-db1}@${POSTGRES_HOST:-postgres}/${POSTGRES_DB:-db1}?sslmode=require
       - VERSION=${VERSION:-3.5.3}
       - APP_NAME=Gapps
       - AS_WORKER=yes
